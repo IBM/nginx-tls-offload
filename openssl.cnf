@@ -363,11 +363,17 @@ MinProtocol = TLSv1.2
 CipherString = DEFAULT@SECLEVEL=2
 
 [engine_section]
+grep11_lite = grep11_lite_section
 grep11 = grep11_section
 
 [grep11_section]
 engine_id = grep11
 dynamic_path = /usr/local/lib/libssleng.so
+LIBGREP11_CONFIG_PATH =
+
+[grep11_lite_section]
+engine_id = grep11_lite
+dynamic_path = /usr/local/lib/libsslenglite.so
 LIBGREP11_CONFIG_PATH =
 
 init = 0
