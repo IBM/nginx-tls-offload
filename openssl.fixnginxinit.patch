@@ -1,0 +1,11 @@
+--- init-old.c	2019-08-19 15:09:02.000000000 -0400
++++ init.c	2019-08-14 15:02:14.000000000 -0400
+@@ -744,7 +744,7 @@
+ #  endif
+ # endif
+     if (opts & (OPENSSL_INIT_ENGINE_ALL_BUILTIN
+-                | OPENSSL_INIT_ENGINE_OPENSSL
++                | OPENSSL_INIT_ENGINE_OPENSSL | OPENSSL_INIT_LOAD_CONFIG
+                 | OPENSSL_INIT_ENGINE_AFALG)) {
+         ENGINE_register_all_complete();
+     }
