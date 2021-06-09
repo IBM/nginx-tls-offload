@@ -64,7 +64,7 @@ RUN ldconfig
 COPY openssl.cnf /etc/ssl/openssl.cnf
 
 # Add nginx configure file, add 2080 port for test; add new html welcome file
-COPY ssleng.index.html /usr/share/nginx/html
+COPY tlseng.index.html /usr/share/nginx/html
 #nginx needs to explicitly setup which environment variables are allowed
 COPY nginx-env.txt /tmp/nginx.conf
 RUN cat /etc/nginx/nginx.conf >> /tmp/nginx.conf && mv /tmp/nginx.conf /etc/nginx/nginx.conf
